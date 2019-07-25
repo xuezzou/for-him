@@ -9,9 +9,9 @@
 }
 @font-face {
     font-family: "HuaKang";
-    /* src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/383755/DomaineDisplayTest-Black.woff); */
     /* src: url("./fonts/HanYiJingBaiRanJianTi-1.ttf"); */
-    src: url('./fonts/HuaKang-1.ttf');
+    src: url('./fonts/HuaKang-1.ttf') format('truetype')，
+    url('./fonts/HuaKang-1.woff') format('woff');
   }
 @font-face{
     font-family: "JingBaiRan";

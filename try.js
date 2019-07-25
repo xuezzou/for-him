@@ -139,3 +139,9 @@ $(document).ready(function() {
       .addClass("active");
   }, 700);
 });
+
+
+$(window).bind("load", function() {
+  // code goes here
+  console.log('loaded')
+});

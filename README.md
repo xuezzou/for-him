@@ -6,4 +6,9 @@ https://xuezzou.github.io/for-him/
 
 #### Reference
 https://codepen.io/cobra_winfrey/pen/jjjero
-https://codepen.io/cobra_winfrey/pen/jjjero 
+https://codepen.io/yumeeeei/pen/BQPmpX
+https://codepen.io/roydigerhund/pen/BKNEoK
+https://codepen.io/apokusin/pen/qbokh
+
+#### Build Process
+https://github.com/akzhy/Vara for animated drawing effect on 'love note'

@@ -36,9 +36,6 @@ function loadFilms() {
       slide.appendChild(bgimg);
       bgimg.appendChild(img);
       img.style.backgroundImage = movie.image;
-        // "url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/383755/" +
-        // str +
-        // ".jpg')";
         
       slide.appendChild(h1);
       slide.appendChild(h3);
@@ -118,7 +115,7 @@ $(".arrow").click(function() {
 });
 
 $(document).ready(function() {
-    loadFilms();
+  loadFilms();
   setTimeout(function() {
     $.each(smallType, function(index, value) {
       $("h1:contains(" + value + ")").html(function(_, html) {
@@ -141,6 +138,34 @@ $(document).ready(function() {
 });
 
 
+// $(window).bind("load", function() {
+//   setTimeout(function(){
+//     $('.loader').addClass('loaded');
+//   }, 3000);
+// });
+
 $(window).bind("load", function() {
-  console.log('loaded')
+  // setTimeout(function(){
+  //   $('.loader').addClass('loaded');
+  // }, 3000);
+  setTimeout(function(){
+    // $('.loader').addClass('loaded');
+    $('#loader').css("display","none");
+// bg image
+    $('#wrap').css("display","inline");
+  }, 3000);
 });
+
+// window.addEventListener("keypress", e => {
+//   e.preventDefault();
+//   console.log('change');
+  
+//   if (e.keyCode === 32) {
+//     setTimeout(function(){
+//       // $('.loader').addClass('loaded');
+//       $('#loader').css("display","none");
+//   // bg image
+//       $('#wrap').css("display","inline");
+//     }, 3000);
+//   }
+// });

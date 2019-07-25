@@ -11,7 +11,7 @@
     font-family: "HuaKang";
     /* src: url("./fonts/HanYiJingBaiRanJianTi-1.ttf"); */
     src: url('./fonts/HuaKang-1.ttf') format('truetype'),
-    url('./fonts/HuaKang-1.wof') format('woff');
+      url('./fonts/HuaKang-1.woff') format('woff');
   }
 @font-face{
     font-family: "JingBaiRan";

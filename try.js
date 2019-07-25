@@ -142,6 +142,5 @@ $(document).ready(function() {
 
 
 $(window).bind("load", function() {
-  // code goes here
   console.log('loaded')
 });

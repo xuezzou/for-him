@@ -10,8 +10,8 @@
 @font-face {
     font-family: "HuaKang";
     /* src: url("./fonts/HanYiJingBaiRanJianTi-1.ttf"); */
-    src: url('./fonts/HuaKang-1.ttf') format('truetype'),
-      url('./fonts/HuaKang-1.woff') format('woff');
+    src: url('../for-him/fonts/HuaKang-1.ttf') format('truetype'),
+      url('../for-him/fonts/HuaKang-1.woff') format('woff');
   }
 @font-face{
     font-family: "JingBaiRan";

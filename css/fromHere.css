@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100");
 @font-face {
-  font-family: "HuaKang";
-  src: url('../fonts/HuaKang-1.ttf') format('truetype'), url('../fonts/HuaKang-1.woff') format('woff');
-}
+    font-family: "HuaKang";
+    src: url('../fonts/HuaKang-1.ttf') format('truetype'),
+      url('../fonts/HuaKang-1.woff') format('woff');
+  }
 
 * {
   box-sizing: border-box;
@@ -26,12 +27,14 @@ div {
   left: 50%;
   margin-left: -95px;
   margin-top: -65px;
+  -webkit-animation: squiggly-anim 0.2s infinite;
+  animation: squiggly-anim 0.2s infinite;
 }
 
 h3 {
   font-weight: 100;
   font-size: 28px;
-  color: #ccc;
+  color: #fff;
   line-height: 36px;
   margin-bottom: 0.5em;
 }
@@ -82,6 +85,8 @@ input:focus {
 .hint {
   display: none;
   padding-inline-start: 0;
+  -webkit-animation: squiggly-anim 0.2s infinite;
+  animation: squiggly-anim 0.2s infinite;
 }
 
 ul {
@@ -143,4 +148,57 @@ strong {
   100% {
     opacity: 0;
   }
+}
+
+#back {
+  font-size: 0.7rem;
+}
+
+@-webkit-keyframes squiggly-anim {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+    filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+    filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+    filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+    filter: url("#squiggly-4");
+  }
+}
+
+@keyframes squiggly-anim {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+    filter: url("#squiggly-0");
+  }
+  5% {
+    -webkit-filter: url("#squiggly-1");
+    filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+    filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+    filter: url("#squiggly-4");
+  }
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
 }

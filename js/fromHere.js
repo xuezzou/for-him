@@ -11,7 +11,7 @@
   formInputs = $(form).children("input");
 
   // Valid Code
-  validCode = "mimi";
+  validCode = "live";
 
   //JQuery AutoTab to automatically move forward when maximum length of input is reached.
   $(formInputs).autotab_magic();
@@ -32,11 +32,10 @@
     c = inputCode(); // Runs inputCode() to have a code string to validate
     if (c === validCode) {// Checks code against validCode variable
       $(form).removeClass("error").addClass("success"); // Adds success class and removes error class from form
-      $(".hint").addClass("elementToFadeOut"); // Hides the hint
-      $(".enterCode").addClass("elementToFadeOut");
+      return $(".hint").fadeIn(); // Shows the hint
       return false; // End of successful code input
     } else if (c.length === validCode.length) {// Checks if code is 4 digits long
-      return $(".hint").fadeIn(); // Shows the hint
+      // return $(".hint").fadeIn(); // Shows the hint
     } else {
       $(form).addClass("error").removeClass("success"); // Adds error class, removes success class from form
       return false; // End of unsuccessful input
@@ -70,11 +69,11 @@
 
 // add sketching effect
 let vara = new Vara(".enterCode", "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json", [{
-  text: "LOVE NOTE"
+  text: "Today we will sell our uniform"
 }], {
     strokeWidth: 1.3, // Width / Thickness of the stroke
     color: "#ccc", // Color of the text
-    textAlign: "center", // String, text align, accepted values are left,center,right
+    textAlign: "center" // String, text align, accepted values are left,center,right
   });
 
 vara.ready(function () {

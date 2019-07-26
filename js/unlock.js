@@ -72,7 +72,6 @@
 let vara = new Vara(".enterCode","./fonts/SatisfySL.json",[{
 	text:"LOVE NOTE"
 }],{
-    fontSize:37,
 	  strokeWidth:1.3, // Width / Thickness of the stroke
 	  color:"#ccc", // Color of the text
 	  textAlign:"center", // String, text align, accepted values are left,center,right

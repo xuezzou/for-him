@@ -53,7 +53,7 @@ function loadFilms(data) {
     if(slider === (total - 1) * 100) {
       console.log("last one and redirect");
       // transition
-      $(location).attr('href', './from-here.html')
+      $(location).attr('href', './from-here')
       return;
     }
     console.log(slider);

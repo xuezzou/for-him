@@ -10,7 +10,8 @@
 
 @font-face {
   font-family: "HuaKang";
-  src: url('../../for-him/fonts/HuaKang-1.woff') format('woff');
+  src: url('../../for-him/fonts/HuaKang-1.woff') format('woff'), 
+    url('../../for-him/fonts/HuaKang-1.ttf') format('truetype');
 }
 
 body {
@@ -1294,7 +1295,9 @@ body .container .slide:nth-of-type(40) {
     filter: url("#squiggly-4");
   }
 }
+
 /* not working */
+
 @media only screen and (max-width: 600px) {
   /* body .container .slide p {
         font-size: 2.5em !important;

@@ -10,7 +10,7 @@ Made with css html and js (only works on pc) and a little bit of →_→ [love �
 <!-- - [](https://codepen.io/apokusin/pen/qbokh) -->
 
 #### Run
-Could run `python -m SimpleHTTPServer` and go to [localhost:8000](localhost:8000) to avoid CORS error. Since the github page works a little differently, need to change the font directory path to `../fonts/[name]` instead of `../../for-him/fonts/[name]` if running on python local server. Same for `../../for-him/textData/[name].json`
+Could run `python -m SimpleHTTPServer` and go to [localhost:8000](localhost:8000) to avoid CORS error. Since the github page works a little differently, if running on python local server, it needs to change the font directory path to `../fonts/[name]` instead of `../../for-him/fonts/[name]`. Same for `../../for-him/textData/[name].json` and `[name].html` instead of `[name]` when redirecting.
 
 #### Good morning good afternoon good evening goodnight
 - Should make as a simple page application, adjust mobile view and add more transitions. 

@@ -218,3 +218,7 @@ body {
     top: -15px;
   }
 }
+a {
+  color:inherit;
+  text-decoration: none;
+}

@@ -34,6 +34,9 @@
       $(form).removeClass("error").addClass("success"); // Adds success class and removes error class from form
       $(".hint").addClass("elementToFadeOut"); // Hides the hint
       $(".enterCode").addClass("elementToFadeOut");
+      setTimeout(function(){
+        $(location).attr('href', './message.html')
+    }, 3000);
       return false; // End of successful code input
     } else if (c.length === validCode.length) {// Checks if code is 4 digits long
       return $(".hint").fadeIn(); // Shows the hint

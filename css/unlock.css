@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100");
 @font-face {
   font-family: "HuaKang";
-  src: url('../fonts/HuaKang-1.ttf') format('truetype'), url('../fonts/HuaKang-1.woff') format('woff');
+  src: url('../../for-him/fonts/HuaKang-1.woff') format('woff');
 }
 
 * {

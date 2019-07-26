@@ -50,6 +50,13 @@ function loadFilms(data) {
 
   $(".right").click(function () {
     let total = $(".slide").length;
+    if(slider === (total - 1) * 100) {
+      console.log("last one and redirect");
+      // transition
+      $(location).attr('href', './from-here.html')
+      return;
+    }
+    console.log(slider);
     if (slider < (total - 1) * 100) {
       slider = slider + 100;
       $(".slide.active")
@@ -142,35 +149,6 @@ $(document).ready(function () {
   }, 700);
 });
 
-
-// $(window).bind("load", function() {
-//   setTimeout(function(){
-//     $('.loader').addClass('loaded');
-//   }, 3000);
-// });
-
-// $(window).bind("load", function() {
-//   // setTimeout(function(){
-//   //   $('.loader').addClass('loaded');
-//   // }, 3000);
-//   setTimeout(function(){
-//     // $('.loader').addClass('loaded');
-//     $('#loader').css("display","none");
-// // bg image
-//     $('#wrap').css("display","inline");
-//   }, 3000);
-// });
-
-// window.addEventListener("keypress", e => {
-//   e.preventDefault();
-//   console.log('change');
-
-//   if (e.keyCode === 32) {
-//     setTimeout(function(){
-//       // $('.loader').addClass('loaded');
-//       $('#loader').css("display","none");
-//   // bg image
-//       $('#wrap').css("display","inline");
-//     }, 3000);
-//   }
-// });
+$(window).bind("load", function() {
+  console.log("successfully loaded the main page");
+});

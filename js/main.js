@@ -1,5 +1,6 @@
+
 const app = document.getElementById("wrap");
-var slider = 0;
+let slider = 0;
 
 const container = document.createElement("div");
 container.setAttribute("class", "container");
@@ -9,13 +10,13 @@ inner.setAttribute("class", "inner");
 app.appendChild(container);
 container.appendChild(inner);
 
-function loadFilms() {
+function loadFilms(data) {
     data.forEach(movie => {
       const slide = document.createElement("div");
       const content = document.createElement("div");
       const bgimg = document.createElement("div");
       const img = document.createElement("div");
-      var str = movie.title;
+      let str = movie.title;
       str = str.replace(/\s+/g, "-").toLowerCase();
       str = str.replace(/'/g, "-");
       slide.setAttribute("class", "slide " + str);
@@ -50,7 +51,7 @@ function loadFilms() {
 //   }
 
   $(".right").click(function() {
-    var total = $(".slide").length;
+    let total = $(".slide").length;
     if (slider < (total - 1) * 100) {
       slider = slider + 100;
       $(".slide.active")
@@ -72,7 +73,7 @@ function loadFilms() {
   });
 
   $(".left").click(function() {
-    var total = $(".slide").length;
+    let total = $(".slide").length;
     if (slider == 0) {
       slider = (total - 1) * 100;
 
@@ -97,7 +98,7 @@ function loadFilms() {
   });
 };
 
-var smallType = [
+let smallType = [
   "in the",
   "of the",
   "my ",
@@ -114,12 +115,27 @@ $(".arrow").click(function() {
   $(".spritebox").toggleClass("zoomies");
 });
 
+function loadData(){
+  $.getJSON("../textData/textData.json", function(data){
+      console.log("success when loading the data for the main page");
+      console.log(data.text)
+      loadFilms(data.text);
+  }).fail(function (jqxhr, status, error) { 
+    console.log('error', status, error) }
+    );;
+  // .error(function(){
+  //     console.log('error occurs when loading the data for the main page');
+  // });
+};
+
 $(document).ready(function() {
-  loadFilms();
+  
+  loadData();
+
   setTimeout(function() {
     $.each(smallType, function(index, value) {
       $("h1:contains(" + value + ")").html(function(_, html) {
-        var regex = new RegExp(value, "g");
+        let regex = new RegExp(value, "g");
         return html.replace(
           regex,
           '<span class="smallcaps">' + value + "</span>"
@@ -127,7 +143,7 @@ $(document).ready(function() {
       });
     });
     $("#wrap").addClass("loaded");
-    Splitting();
+    // Splitting();
   }, 500);
 
   setTimeout(function() {
@@ -144,17 +160,17 @@ $(document).ready(function() {
 //   }, 3000);
 // });
 
-$(window).bind("load", function() {
-  // setTimeout(function(){
-  //   $('.loader').addClass('loaded');
-  // }, 3000);
-  setTimeout(function(){
-    // $('.loader').addClass('loaded');
-    $('#loader').css("display","none");
-// bg image
-    $('#wrap').css("display","inline");
-  }, 3000);
-});
+// $(window).bind("load", function() {
+//   // setTimeout(function(){
+//   //   $('.loader').addClass('loaded');
+//   // }, 3000);
+//   setTimeout(function(){
+//     // $('.loader').addClass('loaded');
+//     $('#loader').css("display","none");
+// // bg image
+//     $('#wrap').css("display","inline");
+//   }, 3000);
+// });
 
 // window.addEventListener("keypress", e => {
 //   e.preventDefault();

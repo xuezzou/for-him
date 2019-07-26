@@ -1,8 +1,7 @@
 @font-face {
     font-family: "HuaKang";
-    /* src: url('../for-him/fonts/HuaKang-1.ttf') format('truetype'),
-      url('../for-him/fonts/HuaKang-1.woff') format('woff'); */
-      src: url('./fonts/HuaKang-1.ttf');
+    src: url('../fonts/HuaKang-1.ttf') format('truetype'),
+      url('../fonts/HuaKang-1.woff') format('woff');
   }
   * {
     box-sizing: border-box;
@@ -70,7 +69,7 @@
     color: #0091FF;
     border-color: #0091FF;
   }
-  .code_input{
+  .codeInput{
     visibility: hidden;
   }
   .hint {
@@ -91,8 +90,33 @@
     font-weight: 200;
   }
 
-  .m-fadeIn {
+.elementToFadeIn {
     visibility: visible;
-    opacity: 1;
-    transition: visibility 0s linear 0s, opacity 300ms;
-  }
+    -webkit-animation: fadein 1s linear 1 forwards;
+    animation: fadein 1s linear 1 forwards;
+}
+
+@-webkit-keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.elementToFadeOut {
+  -webkit-animation: fadeOut 1s linear 1 forwards;
+  animation: fadeOut 1s linear 1 forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

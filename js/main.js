@@ -118,7 +118,7 @@ $(".arrow").click(function () {
 });
 
 function loadData() {
-  $.getJSON("../textData/textData.json", function (data) {
+  $.getJSON("../../for-him/textData/textData.json", function (data) {
     console.log("success when loading the data for the main page");
     console.log(data.text)
     loadFilms(data.text);

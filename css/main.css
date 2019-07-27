@@ -10,8 +10,10 @@
 
 @font-face {
   font-family: "HuaKang";
-  src: url('../../for-him/fonts/HuaKang-1.woff') format('woff'), 
-    url('../../for-him/fonts/HuaKang-1.ttf') format('truetype');
+  /* src: url('../../for-him/fonts/HuaKang-1.woff') format('woff'), 
+    url('../../for-him/fonts/HuaKang-1.ttf') format('truetype'); */
+    src: url('../fonts/HuaKang-1.woff') format('woff'),
+      url('../fonts/HuaKang-1.ttf') format('truetype');
 }
 
 body {

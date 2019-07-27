@@ -118,8 +118,8 @@ $(".arrow").click(function () {
 });
 
 function loadData() {
-  $.getJSON("../../for-him/textData/textData.json", function (data) {
-  // $.getJSON("../textData/textData.json", function (data) { // for local testing
+  // $.getJSON("../../for-him/textData/textData.json", function (data) { // for gh page
+  $.getJSON("../textData/textData.json", function (data) { // for local testing and netlify
     console.log("success when loading the data for the main page");
     console.log(data.text)
     loadFilms(data.text);

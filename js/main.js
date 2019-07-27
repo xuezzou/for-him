@@ -10,12 +10,12 @@ app.appendChild(container);
 container.appendChild(inner);
 
 function loadFilms(data) {
-  if(!data) {
+  if (!data) {
     const errorMessage = document.createElement("marquee");
     errorMessage.textContent = `Something is no bueno`;
     app.appendChild(errorMessage);
     return;
-  } 
+  }
   data.forEach(movie => {
     const slide = document.createElement("div");
     const content = document.createElement("div");
@@ -50,7 +50,7 @@ function loadFilms(data) {
 
   $(".right").click(function () {
     let total = $(".slide").length;
-    if(slider === (total - 1) * 100) {
+    if (slider === (total - 1) * 100) {
       console.log("last one and redirect");
       // transition
       $(location).attr('href', './from-here')
@@ -119,6 +119,7 @@ $(".arrow").click(function () {
 
 function loadData() {
   $.getJSON("../../for-him/textData/textData.json", function (data) {
+  // $.getJSON("../textData/textData.json", function (data) { // for local testing
     console.log("success when loading the data for the main page");
     console.log(data.text)
     loadFilms(data.text);
@@ -127,8 +128,7 @@ function loadData() {
   });
 };
 
-$(document).ready(function () {
-  loadData();
+function display() {
   setTimeout(function () {
     $.each(smallType, function (index, value) {
       $("h1:contains(" + value + ")").html(function (_, html) {
@@ -147,8 +147,18 @@ $(document).ready(function () {
       .first()
       .addClass("active");
   }, 700);
+}
+
+$(document).ready(function () {
+  loadData();
+  // display();
 });
 
-$(window).bind("load", function() {
-  console.log("successfully loaded the main page");
+$(window).bind("load", function () {
+  setTimeout(function () {
+    console.log("successfully loaded the main page");
+    $("#wrap").css("display", "flex");
+    $('#loader').fadeOut();
+    display();
+  }, 3000);
 });

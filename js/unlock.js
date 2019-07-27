@@ -73,7 +73,7 @@
 
 // add sketching effect
 let vara = new Vara(".enterCode", "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json", [{
-  text: "Wait ..."
+  text: "Wait..."
 }], {
     strokeWidth: 1.3, // Width / Thickness of the stroke
     color: "#ccc", // Color of the text

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon&display=swap');
 :root {
   --bg-color: #ab987a;
   /* a7414a 722620 300110d ab987a*/
@@ -8,13 +9,13 @@
   /* bg default and box color default 219ce8,  #of6194 default sub color 0b4365 default sprite color and slide color*/
 }
 
-@font-face {
-  font-family: "HuaKang";
+/* @font-face { */
+  /* font-family: "HuaKang"; */
   /* src: url('../../for-him/fonts/HuaKang-1.woff') format('woff'), 
-    url('../../for-him/fonts/HuaKang-1.ttf') format('truetype'); */
+    url('../../for-him/fonts/HuaKang-1.ttf') format('truetype'); 
     src: url('../fonts/HuaKang-1.woff') format('woff'),
       url('../fonts/HuaKang-1.ttf') format('truetype');
-}
+}*/
 
 body {
   display: flex;
@@ -22,7 +23,8 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  font-family: "HuaKang";
+  /* font-family: "HuaKang"; */
+  font-family: 'Coming Soon', cursive;
   overflow: hidden;
   background: var(--bg-color);
   color: var(--sub-color);
@@ -1015,7 +1017,7 @@ body .container .slide h3 .char {
 }
 
 body .container .slide h1 {
-  font-family: "HuaKang";
+  /* font-family: "HuaKang"; */
   font-size: 80px;
   margin: 10px 0 20px;
   top: 0px;

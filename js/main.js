@@ -1,6 +1,13 @@
 let data = [
   {
     "title": "Castle in the Sky",
+    "description": "“Never love a wild thing, Mr. Bell,' Holly advised him. 'That was Doc's mistake. He was always lugging home wild things. A hawk with a hurt wing. One time it was a full-grown bobcat with a broken leg. But you can't give your heart to a wild thing: the more you do, the stronger they get. Until they're strong enough to run into the woods. Or fly into a tree. Then a taller tree. Then the sky. That's how you'll end up, Mr. Bell. If you let yourself love a wild thing. You'll end up looking at the sky. 'She's drunk,' Joe Bell informed me. "
+     + "Moderately, Holly confessed....Holly lifted her martini. 'Let's wish the Doc luck, too,' she said, touching her glass against mine. 'Good luck: and believe me, dearest Doc -- it's better to look at the sky than live there. Such an empty place; so vague. Just a country where the thunder goes and things disappear.'",
+    "release_date": "2018",
+    "image": "url('./images/boston_a-min.jpg')"
+  },
+  {
+    "title": "Castle in the Sky",
     "description": "不知道为什么在我的印象里，我是从来没有度过情人、七夕等属于两个人的节日，倒是记得在这些日子里逛书店买书的潇梦，若是要我选，我定然要说“书是我一生的情人”然后直接扑倒在“知识的海洋”里，不断沉沉浮浮、飘飘荡荡，淹死也不足为过。就这样过惯了没有佳人的七夕，我反而疑惑到底何谓佳人、何谓七夕。世俗对于前者的定义向来没有统一过，或身边人不佳，却也还是个人；或认为情侣算佳，却总因为过高的期待而不被当人看。我看百度百科说“佳人”一词应释义为“美好的人”，那一细想，十八年来我也算遇到了不少的人，高高矮矮、胖胖瘦瘦、黑黑白白，都是佳人。至于七夕，世人总说要共度美景、分享年华，反衬着那些凭栏故作的哀叹，我更愿将七夕时分视作与美好事物的通感和共鸣，有无佳人相伴、无非是庸人自扰，还抵不过我在午夜时收到的一封来信",
     "release_date": "2018",
     "image": "url('./images/boston_a-min.jpg')"
@@ -97,7 +104,8 @@ function loadFilms() {
     h3.setAttribute("data-splitting", "chars");
     h1.setAttribute("data-splitting", "words");
     const p = document.createElement("p");
-    movie.description = movie.description.substring(0, 400);
+    // movie.description = movie.description.substring(0, 400);
+    movie.description = movie.description;
     p.textContent = `${movie.description}...`;
 
     inner.appendChild(slide);
@@ -224,5 +232,5 @@ $(window).bind("load", function () {
     $("#wrap").css("display", "flex");
     $('#loader').fadeOut();
     display();
-  }, 3000);
+  }, 1000);
 });

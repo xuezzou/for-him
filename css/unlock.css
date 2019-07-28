@@ -1,11 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100");
-/* @font-face {
-  font-family: "HuaKang";
-  src: url('../../for-him/fonts/HuaKang-1.woff') format('woff'),
-    url('../../for-him/fonts/HuaKang-1.ttf') format('truetype');
-  src: url('../fonts/HuaKang-1.woff') format('woff'),
-    url('../fonts/HuaKang-1.ttf') format('truetype');
-} */
 
 * {
   box-sizing: border-box;
@@ -36,7 +29,7 @@ h3 {
   font-size: 28px;
   color: #ccc;
   line-height: 36px;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 form {
@@ -78,6 +71,10 @@ input:focus {
   border-color: #0091FF;
 }
 
+.enterCode{
+  visibility: hidden;
+}
+
 .codeInput {
   visibility: hidden;
 }
@@ -103,8 +100,8 @@ strong {
 
 .elementToFadeIn {
   visibility: visible;
-  -webkit-animation: fadein 1s linear 1 forwards;
-  animation: fadein 1s linear 1 forwards;
+  -webkit-animation: fadein 1.5s linear 1 forwards;
+  animation: fadein 1.5s linear 1 forwards;
 }
 
 @-webkit-keyframes fadein {
@@ -146,4 +143,15 @@ strong {
   100% {
     opacity: 0;
   }
+}
+
+#together{
+  font-size: 1.8rem;
+}
+#back {
+  font-size: 0.7rem;
+}
+a {
+  color: inherit;
+  text-decoration: none;
 }

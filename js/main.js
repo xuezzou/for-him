@@ -1,11 +1,5 @@
+// define data
 let data = [
-  {
-    "title": "Castle in the Sky",
-    "description": "“Never love a wild thing, Mr. Bell,' Holly advised him. 'That was Doc's mistake. He was always lugging home wild things. A hawk with a hurt wing. One time it was a full-grown bobcat with a broken leg. But you can't give your heart to a wild thing: the more you do, the stronger they get. Until they're strong enough to run into the woods. Or fly into a tree. Then a taller tree. Then the sky. That's how you'll end up, Mr. Bell. If you let yourself love a wild thing. You'll end up looking at the sky. 'She's drunk,' Joe Bell informed me. "
-     + "Moderately, Holly confessed....Holly lifted her martini. 'Let's wish the Doc luck, too,' she said, touching her glass against mine. 'Good luck: and believe me, dearest Doc -- it's better to look at the sky than live there. Such an empty place; so vague. Just a country where the thunder goes and things disappear.'",
-    "release_date": "2018",
-    "image": "url('./images/boston_a-min.jpg')"
-  },
   {
     "title": "Castle in the Sky",
     "description": "不知道为什么在我的印象里，我是从来没有度过情人、七夕等属于两个人的节日，倒是记得在这些日子里逛书店买书的潇梦，若是要我选，我定然要说“书是我一生的情人”然后直接扑倒在“知识的海洋”里，不断沉沉浮浮、飘飘荡荡，淹死也不足为过。就这样过惯了没有佳人的七夕，我反而疑惑到底何谓佳人、何谓七夕。世俗对于前者的定义向来没有统一过，或身边人不佳，却也还是个人；或认为情侣算佳，却总因为过高的期待而不被当人看。我看百度百科说“佳人”一词应释义为“美好的人”，那一细想，十八年来我也算遇到了不少的人，高高矮矮、胖胖瘦瘦、黑黑白白，都是佳人。至于七夕，世人总说要共度美景、分享年华，反衬着那些凭栏故作的哀叹，我更愿将七夕时分视作与美好事物的通感和共鸣，有无佳人相伴、无非是庸人自扰，还抵不过我在午夜时收到的一封来信",
@@ -35,12 +29,6 @@ let data = [
     "description": "“爱不止是情感、情绪、热情，爱其实真正是一种意志。”于我，爱亦是习惯，就像爱你也成为了难以改变的习惯一样。若想强扭着改变，无疑有两种情况，放血或是割肉，听着都可怕，就不细着解释了，总之都是痛的，更何况是深入骨髓。变又怎样，不变又怎样，早已如同过往一样，化为朝思暮想的盼头融于血肉了",
     "release_date": "1991",
     "image": "url(./images/boston_e-min.jpg"
-  },
-  {
-    "title": "Only Yesterday",
-    "description": "“爱不止是情感、情绪、热情，爱其实真正是一种意志。”于我，爱亦是习惯，就像爱你也成为了难以改变的习惯一样。若想强扭着改变，无疑有两种情况，放血或是割肉，听着都可怕，就不细着解释了，总之都是痛的，更何况是深入骨髓。变又怎样，不变又怎样，早已如同过往一样，化为朝思暮想的盼头融于血肉了",
-    "release_date": "1991",
-    "image": "url(./images/boston_f-min.jpg"
   },
   {
     "title": "Only Yesterday",
@@ -189,14 +177,6 @@ $(".arrow").click(function () {
 });
 
 function loadData() {
-  // $.getJSON("../../for-him/textData/textData.json", function (data) { // for gh page
-  // $.getJSON("../textData/textData.json", function (data) { // for local testing and netlify
-  //   console.log("success when loading the data for the main page");
-  //   console.log(data.text)
-  //   loadFilms(data.text);
-  // }).fail(function (jqxhr, status, error) {
-  //   console.log('error', status, error)
-  // });
   loadFilms();
 };
 
